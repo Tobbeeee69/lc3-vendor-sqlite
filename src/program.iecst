@@ -28,7 +28,7 @@ PROGRAM Template
 		ints[0] := 5;
 		
 		//make an insert sql statement 
-		sqlstring1 :='insert into log values(((SELECT max("id") from log)+1), }s, }0)';
+		sqlstring1 :='insert into log("time", "value") values(}s, }0)';
  		
  		//replace the variables with values
 		SQLite_StatementReplacer(string1 := sqlstring1, str := timestamp, ints := ints, retstr => statement);
