@@ -33,4 +33,4 @@ Mit dem SQLite_StatementReplacer lässt sich ein Text mit Variablen vom Typ Stri
 
 Database scheme
 -----------------
-CREATE TABLE log(id integer primary key, time integer, value integer);
+CREATE TABLE log(id integer primary key autoincrement, time integer, value integer);
