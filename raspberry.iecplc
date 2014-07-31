@@ -13,7 +13,7 @@
 
 CONFIGURATION RaspbianConfiguration
 	RESOURCE raspberry ON Raspbian { ON_CHANNEL := RaspberryChannel }
-		TASK DefaultTask(INTERVAL := TIME#500ms, PRIORITY := 38229);
+		TASK DefaultTask(INTERVAL := TIME#1000ms, PRIORITY := 38229);
 		PROGRAM TemplateInstance WITH DefaultTask :
 			Template;
 	END_RESOURCE

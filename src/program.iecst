@@ -3,4 +3,52 @@
  */
 PROGRAM Template
 
+	VAR
+		str : STRING[100];
+		handle : lint := 0;
+		timestamp :STRING[10];
+		sqlstring1: string[250];
+		statement : STRING[500];
+		ints : array[0..9] of int;
+		
+		sqlresponse : int;
+		stri : string[50];
+		integers : ARRAY[0..9] of int;
+		
+	END_VAR
+	
+		if handle = 0 then //opens the database handle if not already opened
+		str := '/usr/local/DatabaseFiles/exampleDB';
+		SQLite_Connect(dbname:=str,handle=>handle, ENO => ENO); end_if;
+		
+		//Getting the actual timestamp in unixepoch
+		SQLite_GetTimestamp(timestamp => timestamp);
+		
+		//dummy value
+		ints[0] := 5;
+		
+		//make an insert sql statement 
+		sqlstring1 :='insert into log values(((SELECT max("id") from log)+1), }s, }0)';
+ 		
+ 		//replace the variables with values
+		SQLite_StatementReplacer(string1 := sqlstring1, str := timestamp, ints := ints, retstr => statement);
+	
+		//execute the sql statement
+		SQLite_ExecuteStatement(handle := handle, sql := statement, sqlresponse => sqlresponse, ENO => ENO);
+	
+	
+		//get the time of the last insert as formated string
+		sqlstring1 :='select datetime(time, "unixepoch") from log where id like (select max("id") from log)'; 
+		
+		//execute the select statement and get the string
+		SQLite_GetString(handle := handle, sql := sqlstring1, retstr => stri, ENO => ENO);
+		
+		
+		//get the amount of rows in the log table
+		sqlstring1 :='select count("id") from log';
+		
+		//execute and get the result as int
+		SQLite_GetIntegers(handle := handle, sql := sqlstring1, integers => integers, ENO => ENO); 
+		
+
 END_PROGRAM
