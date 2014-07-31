@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
-ptk.properties.include.path.Raspbian=C\:\\includes
+ptk.properties.include.path.Raspbian=..\\..\\..\\includes
 ptk.properties.library.name.Raspbian=sqlite3
-ptk.properties.library.path.Raspbian=C\:\\library
+ptk.properties.library.path.Raspbian=..\\..\\..\\library
 ptk.properties.selected.platform=Raspbian
