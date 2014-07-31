@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <configuration name="RaspbianConfiguration">
+        <resource name="raspberry">
+            <variable instancePath="TemplateInstance.ENO" type="BOOL"/>
+            <variable instancePath="TemplateInstance.str" type="STRING"/>
+            <variable instancePath="TemplateInstance.handle" type="LINT"/>
+            <variable instancePath="TemplateInstance.timestamp" type="STRING"/>
+            <variable instancePath="TemplateInstance.sqlstring1" type="STRING"/>
+            <variable instancePath="TemplateInstance.statement" type="STRING"/>
+            <variable instancePath="TemplateInstance.sqlresponse" type="INT"/>
+            <variable instancePath="TemplateInstance.stri" type="STRING"/>
+            <variable instancePath="TemplateInstance.ints[0]" type="INT"/>
+            <variable instancePath="TemplateInstance.ints[1]" type="INT"/>
+            <variable instancePath="TemplateInstance.ints[2]" type="INT"/>
+            <variable instancePath="TemplateInstance.ints[3]" type="INT"/>
+            <variable instancePath="TemplateInstance.ints[4]" type="INT"/>
+            <variable instancePath="TemplateInstance.ints[5]" type="INT"/>
+            <variable instancePath="TemplateInstance.ints[6]" type="INT"/>
+            <variable instancePath="TemplateInstance.ints[7]" type="INT"/>
+            <variable instancePath="TemplateInstance.ints[8]" type="INT"/>
+            <variable instancePath="TemplateInstance.ints[9]" type="INT"/>
+            <variable instancePath="TemplateInstance.integers[0]" type="INT"/>
+            <variable instancePath="TemplateInstance.integers[1]" type="INT"/>
+            <variable instancePath="TemplateInstance.integers[2]" type="INT"/>
+            <variable instancePath="TemplateInstance.integers[3]" type="INT"/>
+            <variable instancePath="TemplateInstance.integers[4]" type="INT"/>
+            <variable instancePath="TemplateInstance.integers[5]" type="INT"/>
+            <variable instancePath="TemplateInstance.integers[6]" type="INT"/>
+            <variable instancePath="TemplateInstance.integers[7]" type="INT"/>
+            <variable instancePath="TemplateInstance.integers[8]" type="INT"/>
+            <variable instancePath="TemplateInstance.integers[9]" type="INT"/>
+        </resource>
+    </configuration>
+</project>
