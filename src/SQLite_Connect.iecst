@@ -1,0 +1,21 @@
+{ extern_c }
+/*
+ * Connects to a sqlite database.											 <br>
+ * For more information about the SQLite connect:                            <br>
+ * http://www.sqlite.org/c3ref/open.html							         <br>
+ *                                                                           <br>
+ * <b>dbname</b> = Path to the sqlite database file.					     <br>
+ * 
+ * Returns the handle to the SQLite database.
+ */
+FUNCTION SQLite_Connect : lint
+	
+	VAR_INPUT 
+		dbname : String[100];
+	END_VAR
+	
+	VAR_OUTPUT
+		handle : lint;
+	END_VAR
+	
+END_FUNCTION

@@ -1,0 +1,23 @@
+{ extern_c }
+/*
+ * Exectues a SQLite statement  .											 <br>
+ * For more information about the SQLite execute:                            <br>
+ * http://www.sqlite.org/c3ref/exec.html							         <br>
+ *                                                                           <br>
+ * <b>sql</b> = The SQL statement.										     <br>
+ * <b>handle</b> = Handle for the SQLite database opened by SQLite_Connect.  <br>
+ * 
+ * Returns a code for troubleshooting.
+ */
+FUNCTION SQLite_ExecuteStatement : int
+	
+	VAR_INPUT
+		sql : String[500];
+		handle : lint;
+	END_VAR
+
+	VAR_OUTPUT
+		sqlresponse : int;
+	END_VAR
+	
+END_FUNCTION

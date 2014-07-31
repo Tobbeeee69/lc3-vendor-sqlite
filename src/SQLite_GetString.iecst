@@ -1,0 +1,24 @@
+{ extern_c }
+/*
+ * Exectues a SQLite statement and returns the challanged value.			 <br>
+ * For more information about the SQLite prepare & column_text               <br>
+ * http://www.sqlite.org/c3ref/prepare.html  						         <br>
+ * http://www.sqlite.org/c3ref/column_blob.html                              <br>
+ * 																			 <br>
+ * <b>sql</b> = The SQL statement.										     <br>
+ * <b>handle</b> = Handle for the SQLite database opened by SQLite_Connect.  <br>
+ * 
+ * Returns a string of max. 50 chars, all above will be cut.
+ */
+FUNCTION SQLite_GetString : String[50]
+	
+	VAR_INPUT
+		handle : lint;
+		sql : String[500];
+	END_VAR
+	
+	VAR_OUTPUT
+		retstr : String[50];
+	END_VAR
+	
+END_FUNCTION

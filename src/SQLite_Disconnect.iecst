@@ -1,0 +1,21 @@
+{ extern_c }
+/*
+ * Disconnects from a SQLite database.				    					 <br>
+ * For more information about the SQLite disconnect:                         <br>
+ * http://www.sqlite.org/c3ref/close.html							         <br>
+ *                                                                           <br>
+ * <b>handle</b> = Handle for the SQLite database opened by SQLite_Connect.  <br>
+ * 
+ * Returns a value for troubleshooting.
+ */
+FUNCTION SQLite_Disconnect : int
+	
+	VAR_INPUT
+		handle : lint;
+	END_VAR
+	
+	VAR_OUTPUT
+		response : int;
+	END_VAR
+	
+END_FUNCTION

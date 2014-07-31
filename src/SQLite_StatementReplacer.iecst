@@ -1,0 +1,22 @@
+{ extern_c }
+/*
+ * Replaces the given string with the given variables.						 <br>
+ * 																			 <br>
+ * <b>string1</b> = The string where the variables should be replaced.	     <br>
+ * <b>ints</b> = An array of ints which will be replaced in the string.	     <br>
+ * <b>str</b> = A string which will be replaced in the string.				 <br>
+ * 
+ * Returns a string of max. 500 chars with all the variables replaced.
+ */
+FUNCTION SQLite_StatementReplacer : STRING[500]
+	VAR_INPUT
+		string1 : string[400];
+		ints : array[0..9] of int;
+		str : string[50];
+	END_VAR
+	
+	VAR_OUTPUT
+		retstr : STRING[500];
+	END_VAR
+
+END_FUNCTION

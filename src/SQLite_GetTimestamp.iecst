@@ -1,0 +1,15 @@
+{ extern_c }
+/*
+ * Returns the current timestamp in unixepoch format.						 <br>
+ * For more information about the bash time command:           			     <br>
+ * http://ss64.com/bash/time.html				                             <br>
+ * 																			 <br>
+ * Returns an string of ten chars of the current timestamp in unixepoch.
+ */
+FUNCTION SQLite_GetTimestamp : STRING[10]
+	
+	VAR_OUTPUT
+		timestamp : STRING[10];
+	END_VAR
+	
+END_FUNCTION
