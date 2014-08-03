@@ -1,14 +1,14 @@
-#ifndef LC_PROT_LCFU___SQLITE_STATEMENTREPLACER__C
-#define LC_PROT_LCFU___SQLITE_STATEMENTREPLACER__C
+#ifndef LC_PROT_LCFU___SQLITE_SPRRINTF__C
+#define LC_PROT_LCFU___SQLITE_SPRRINTF__C
 
-#include <lcfu___sqlite_statementreplacer.h>
+#include <lcfu___sqlite_sprintf.h>
 #include <stdio.h>
 #include <sqlite3.h>
 #include <stdlib.h>
 #include "debug.h"
 
 /*                            Functions                        */
-void  lcfu___SQLITE_STATEMENTREPLACER(LC_TD_Function_SQLITE_STATEMENTREPLACER* LC_this, LcCgChar LC_VD_STRING1[401], LcCgChar LC_VD_STR[51], LC_TD_INT LC_VD_INTS[10], struct _lcoplck_epdb_1_impl* pEPDB)
+void  lcfu___SQLITE_SPRINTF(LC_TD_Function_SQLITE_SPRRINTF* LC_this, LcCgChar LC_VD_STRING1[401], LcCgChar LC_VD_STR[51], LC_TD_INT LC_VD_INTS[10], struct _lcoplck_epdb_1_impl* pEPDB)
 {
   /* Vendor C Code */
 	LcCgChar str[500]; /*  */
@@ -23,8 +23,8 @@ void  lcfu___SQLITE_STATEMENTREPLACER(LC_TD_Function_SQLITE_STATEMENTREPLACER* L
 	ch[0] = '\0';
 
 	/*
-	 * Diese Schleife überprüft jeden char im übergebenen Text (LC_VD_STRING1)
-	 * Ist der char != '}' wird der char an str angehängt.
+	 * Diese Schleife Ã¼berprÃ¼ft jeden char im Ã¼bergebenen Text (LC_VD_STRING1)
+	 * Ist der char != '}' wird der char an str angehÃ¤ngt.
 	 * Ist der char == '}' wird untersucht ob es sich um einen Text oder Zahl handelt.
 	 * 		Falls der nachfolgende char ein 's' ist, wird '}s' durch LC_VD_STR ersetzt.
 	 * 		Falls der nachfolgende char eine Zahl von 0-2 ist, wird }0, }1, }2 durch die
@@ -67,10 +67,10 @@ void  lcfu___SQLITE_STATEMENTREPLACER(LC_TD_Function_SQLITE_STATEMENTREPLACER* L
 		}
 		amount = x;
 	}
-	for(i=0; i<500; i++) /* Hier wird der Rückgabewert LV_CD_RETSTR aufgebaut. */
+	for(i=0; i<500; i++) /* Hier wird der RÃ¼ckgabewert LV_CD_RETSTR aufgebaut. */
 	{
 		if(i >= amount) {
-			LC_this->LC_VD_RETSTR[i] = '\0'; /* Am Ende schließt man mit '\0' ab. */
+			LC_this->LC_VD_RETSTR[i] = '\0'; /* Am Ende schlieÃŸt man mit '\0' ab. */
 		}
 		LC_this->LC_VD_RETSTR[i] = (str[i]);
 	}
