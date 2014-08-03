@@ -28,7 +28,7 @@ Dieser Baustein gibt eine Reihe Integer Werte von der Datenbank zurück. Er brau
 **SQLite_GetString**
 Dieser Baustein liefert einen String von maximal 50 Zeichen zurück. Zum Ausführen werden der Handle der Datenbank und ein SQL Statement benötigt. Zurück bekommt man über den retstr von String[50] den Wert, den das SQL-Statement liefert.
 
-**SQLite_StatementReplacer**
+**SQLite_Sprintf**
 Mit dem SQLite_StatementReplacer lässt sich ein Text mit Variablen vom Typ String und Int befüllen. Dazu gibt man ihm mit string1 den Haupttext an, indem die Variablen eingesetzt werden sollen. In der str variable steht dann der String wert der eingesetzt werden soll. Mit dem ints Array kann man bis zu zehn Ints übergeben, welche ebenfalls im Haupttext ersetzt werden können. zurück bekommt man dann den retstr (return string) von dem Typ String[500].
 
 Database scheme
