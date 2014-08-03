@@ -31,7 +31,7 @@ PROGRAM Template
 		sqlstring1 :='insert into log("time", "value") values(}s, }0)';
  		
  		//replace the variables with values
-		SQLite_StatementReplacer(string1 := sqlstring1, str := timestamp, ints := ints, retstr => statement);
+		SQLite_Sprintf(string1 := sqlstring1, str := timestamp, ints := ints, retstr => statement);
 	
 		//execute the sql statement
 		SQLite_ExecuteStatement(handle := handle, sql := statement, sqlresponse => sqlresponse, ENO => ENO);
